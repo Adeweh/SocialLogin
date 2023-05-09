@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/signIn")
 public class SocialLoginController {
 
-    @GetMapping
-    public String hello(){
+    @GetMapping("/")
+    public String home(){
 
         return "Login Successful";
+    }
+    @GetMapping("/login")
+    public String login(){
+        return "Hello User";
     }
 }
